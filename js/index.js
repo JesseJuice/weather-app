@@ -40,9 +40,10 @@ function convertion(val){
             var feeling = data['main']['feels_like']
             var cloudy = data['clouds']['all']
             var humidity = data['main']['humidity']
-            const { icon } = data.weather[0];
+            var weatherIcon = data['weather']['0']['icon']
 
-            const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+           var iconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+
 //Now with the help of innerHTML you have to make arrangements to display all the information in the webpage.
             iconImg.src = iconUrl;
             city.innerHTML=`Weather of <span>${nameval}<span>`
